@@ -16,8 +16,12 @@ const showCommentsWebsite = comments =>{
     for(const comment of comments){
         console.log(comment);
         const getComments = document.getElementById('show-comments');
+        const h4 = document.createElement('h4');
+        h4.innerText = `Name: ${comment.name}`;
         const p = document.createElement('p');
+
         p.innerText = `Email: ${comment.email}`;
+        getComments.appendChild(h4);
         getComments.appendChild(p);
     }
 }
