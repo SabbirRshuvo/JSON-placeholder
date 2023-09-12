@@ -10,10 +10,15 @@ const showComments = () => {
 
 // 2. show website with html
 
+// 3. add button to show comments
+// 4. use arrow function
+// 5. dynamic data load
+// 6. show details dynamic
+
 const showCommentsWebsite = comments =>{
     console.log(comments);
 
-    for(const comment of comments){
+    comments.forEach(comment=>{
         console.log(comment);
         const getComments = document.getElementById('show-comments');
         const h4 = document.createElement('h4');
@@ -23,15 +28,11 @@ const showCommentsWebsite = comments =>{
         p.innerText = `Email: ${comment.email}`;
         getComments.appendChild(h4);
         getComments.appendChild(p);
-    }
+    })
 }
 
 
 
-// 3. add button to show comments
-// 4. use arrow function
-// 5. dynamic data load
-// 6. show details dynamic
 
 // {7. (randomuser.me)user }
 
